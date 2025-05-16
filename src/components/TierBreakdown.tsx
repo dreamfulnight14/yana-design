@@ -26,14 +26,14 @@ const TierBreakdown = () => {
 
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
 						{/* Smooth & Mellow */}
-						<div className="bg-white p-6 rounded-xl shadow-sm border border-amber-200 flex flex-col">
+						<div className="bg-white p-6 rounded-xl shadow-sm border flex flex-col">
 							<div className="flex items-center justify-between mb-4">
 								<h3 className="text-xl font-bold text-gray-900">
 									Smooth & Mellow
 								</h3>
 								<Calendar className="h-8 w-8 text-amber-500" />
 							</div>
-							<div className="border-t border-amber-100 py-4">
+							<div className="border-t py-4">
 								<h4 className="font-semibold mb-2">How to Qualify:</h4>
 								<p className="text-gray-700 mb-4">Every 3rd visit</p>
 								<h4 className="font-semibold mb-2">Benefit:</h4>
@@ -65,7 +65,7 @@ const TierBreakdown = () => {
 						</div>
 
 						{/* Heavy Hitter */}
-						<div className="bg-white p-6 rounded-xl shadow-sm border border-amber-200 flex flex-col relative overflow-hidden">
+						<div className="bg-white p-6 rounded-xl shadow-sm border flex flex-col relative overflow-hidden">
 							<div className="absolute -right-10 -top-10 bg-amber-500 text-white rotate-45 px-10 py-2 text-sm">
 								Popular
 							</div>
@@ -75,7 +75,7 @@ const TierBreakdown = () => {
 								</h3>
 								<Trophy className="h-8 w-8 text-amber-500" />
 							</div>
-							<div className="border-t border-amber-100 py-4">
+							<div className="border-t py-4">
 								<h4 className="font-semibold mb-2">How to Qualify:</h4>
 								<p className="text-gray-700 mb-4">
 									Earn 4,000 points between March 1, 2025 and March 1, 2026 (1
@@ -95,12 +95,12 @@ const TierBreakdown = () => {
 						</div>
 
 						{/* OG */}
-						<div className="bg-white p-6 rounded-xl shadow-sm border border-amber-200 flex flex-col">
+						<div className="bg-white p-6 rounded-xl shadow-sm border flex flex-col">
 							<div className="flex items-center justify-between mb-4">
 								<h3 className="text-xl font-bold text-gray-900">OG</h3>
 								<Award className="h-8 w-8 text-amber-500" />
 							</div>
-							<div className="border-t border-amber-100 py-4">
+							<div className="border-t py-4">
 								<h4 className="font-semibold mb-2">How to Qualify:</h4>
 								<p className="text-gray-700 mb-4">
 									Earn 8,000 points between March 1, 2025 and March 1, 2026
@@ -115,47 +115,71 @@ const TierBreakdown = () => {
 						</div>
 					</div>
 
-					<div className="w-full overflow-x-auto">
-						<Table className="w-full">
-							<TableCaption>Comparison of Amplify 2.0 Tiers</TableCaption>
-							<TableHeader>
-								<TableRow>
-									<TableHead className="text-gray-900">Tier</TableHead>
-									<TableHead className="text-gray-900">
+					{/* <div className="w-full overflow-x-auto">
+						<table className="min-w-[600px] w-full border-separate border-spacing-0 rounded-lg overflow-hidden shadow-sm bg-white">
+							<caption className="text-lg font-semibold text-gray-700 py-4">
+								Comparison of Amplify 2.0 Tiers
+							</caption>
+							<thead>
+								<tr className="bg-purple-50">
+									<th className="px-6 py-3 text-left text-gray-900 font-bold text-base">
+										Tier
+									</th>
+									<th className="px-6 py-3 text-left text-gray-900 font-bold text-base">
 										How to Qualify
-									</TableHead>
-									<TableHead className="text-gray-900">Benefit</TableHead>
-									<TableHead className="text-gray-900">Duration</TableHead>
-								</TableRow>
-							</TableHeader>
-							<TableBody>
-								<TableRow>
-									<TableCell className="font-medium text-gray-800">
+									</th>
+									<th className="px-6 py-3 text-left text-gray-900 font-bold text-base">
+										Benefit
+									</th>
+									<th className="px-6 py-3 text-left text-gray-900 font-bold text-base">
+										Duration
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr className="hover:bg-purple-50 transition">
+									<td className="px-6 py-4 font-semibold flex items-center gap-2">
 										Smooth & Mellow
-									</TableCell>
-									<TableCell>Every 3rd visit</TableCell>
-									<TableCell>20% OFF (one-time)</TableCell>
-									<TableCell>Each reward lasts 90 days</TableCell>
-								</TableRow>
-								<TableRow>
-									<TableCell className="font-medium text-gray-800">
+									</td>
+									<td className="px-6 py-4 text-gray-700">Every 3rd visit</td>
+									<td className="px-6 py-4 text-gray-700">
+										20% OFF (one-time)
+									</td>
+									<td className="px-6 py-4 text-gray-700">
+										Each reward lasts 90 days
+									</td>
+								</tr>
+								<tr className="bg-gray-50 hover:bg-purple-50 transition">
+									<td className="px-6 py-4 font-semibold flex items-center gap-2">
 										Heavy Hitter
-									</TableCell>
-									<TableCell>4,000 points in 12 months</TableCell>
-									<TableCell>20% OFF every purchase</TableCell>
-									<TableCell>Until March 1, 2027</TableCell>
-								</TableRow>
-								<TableRow>
-									<TableCell className="font-medium text-gray-800">
+									</td>
+									<td className="px-6 py-4 text-gray-700">
+										4,000 points in 12 months
+									</td>
+									<td className="px-6 py-4 text-gray-700">
+										20% OFF every purchase
+									</td>
+									<td className="px-6 py-4 text-gray-700">
+										Until March 1, 2027
+									</td>
+								</tr>
+								<tr className="hover:bg-purple-50 transition">
+									<td className="px-6 py-4 font-semibold flex items-center gap-2">
 										OG
-									</TableCell>
-									<TableCell>8,000 points in 12 months</TableCell>
-									<TableCell>30% OFF every purchase</TableCell>
-									<TableCell>Until March 1, 2027</TableCell>
-								</TableRow>
-							</TableBody>
-						</Table>
-					</div>
+									</td>
+									<td className="px-6 py-4 text-gray-700">
+										8,000 points in 12 months
+									</td>
+									<td className="px-6 py-4 text-gray-700">
+										30% OFF every purchase
+									</td>
+									<td className="px-6 py-4 text-gray-700">
+										Until March 1, 2027
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div> */}
 				</div>
 			</div>
 		</section>

@@ -63,7 +63,7 @@ const StayConnected = () => {
 						</div>
 					</div>
 
-					<div className="bg-amber-50 p-6 rounded-lg max-w-2xl w-full mt-8 border border-amber-100">
+					<div className="bg-amber-50 p-6 rounded-lg max-w-2xl w-full mt-8 border">
 						<h3 className="text-xl font-bold mb-3 text-center text-gray-800">
 							Need Help?
 						</h3>
